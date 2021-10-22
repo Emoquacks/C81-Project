@@ -7,8 +7,8 @@ ctx.lineWidth=2;
 ctx.arc(200,200,50,0,2*Math.PI);
 canvas.addEventListener("mousedown",my_mousedown)
 function my_mousedown(e){
-    var mouse_x=e.clientX;
-    var mouse_y=e.clientY;
+    var mouse_x=e.clientX - canvas.offsetLeft;
+    var mouse_y=e.clientY - canvas.offsetTop;
     console.log("X="+mouse_x);
     console.log("Y="+mouse_y);
     circle(mouse_x,mouse_y);
